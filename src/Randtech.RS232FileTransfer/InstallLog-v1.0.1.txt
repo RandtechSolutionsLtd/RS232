@@ -1,0 +1,69 @@
+RS232 FTP Application
+=====================
+1 - About
+---------
+Document Version: 2
+Author: Chris Randle (csharpforevermore@gmail.com | chrisrandleemail@gmail.com), 07534 801 942
+Publish Date: 19/12/2018
+
+2 - Description
+---------------
+An RS232 file transmission application written using DotNet Core 2.2 SDK, inside Visual Studio 2017
+
+3 - How to run
+--------------
+3.1 - Receive
+-------------
+a. Open a command prompt by pressing Windows key + R, typing cmd, and pressing Enter
+b. In the command prompt console, type "Get" or "Receive"
+c. The application will run and just leave the command prompt open. 
+d. When you want to stop the receive application, just close the command prompt
+
+3.2 - Send
+----------
+a. As for 3.1 but type "send" in the command prompt bit (step b)
+
+
+4 - Release Log
+---------------
+
+(18-12-18)
+	1) Created folder C:\Users\User\Desktop\RS232 FTP\
+	2) Dragged and dropped the following required files to "C:\Users\User\Documents\RS232 FTP\"
+		A. 7zip portable 
+			(https://portableapps.com) 
+			(7-ZipPortable_18.05.paf.exe)
+		B. dot net core 2.2 runtime 
+			(https://dotnet.microsoft.com/download) 
+			(dotnet-hosting-2.2.0-win.exe)
+		C. source files in 7zip archive 
+			(CR.RS232FileTransfer.7z)
+	3) Installed 7zip portable (4.2.A)
+	4) Extracted source folder (includes published EXes)  from source file (4.2.C)
+	5) Installed DotNet Core 2.2 runtime (4.2.B)
+	6) Set up the config file requirements by copying the data folder and contained files to C:\data\ 
+		from C:\Users\User\Documents\RS232 FTP\CR.RS232FileTransfer\Randtech.RS232FileTransfer\data\
+	7) Created the Get.bat, Send.bat, and Receive.bat files so that steps 3.1 and 3.2 work, 
+		in C:\Users\User\ (default folder opened when performing step 3.1a
+	8) Tested that a file was uploaded using source file C:\data\datafile.txt; and was saved 
+		as C:\data\test results\incoming.txt (needs filename fixing as should use name from config file). 
+		Exception thrown. Had to debug.
+	9) Configured Send port as "COM6" in C:\data\FileTransfer\FileTransferSend.txt
+	10) Configured Receive to  run on "COM5" - as per the settings on the widgets on the server
+	11) Re-ran the test
+
+(19-12-18)
+	1) Implemented changes
+		a) Bug fix: File name when saving incorrect
+		b) Bug fix: file not downloaded on server for some reason - parity? stop bit? configuration?
+		c) Feature: add logging	 (DONE)
+		d) Task: add xml-doc comments
+		e) Bug fix: gracefully handle when port name not found
+
+
+
+5 - Technical Dev Notes
+-----------------------
+Main files to consider are the 2 executables Upload.exe and Download.exe in the source. The are ran using the 
+batch files Send.bat and Receive.bat by opening two command prompts, and after navigating to the relevant folder, 
+you run the executables via these batch files by typing in one "receive" and in the other "send"

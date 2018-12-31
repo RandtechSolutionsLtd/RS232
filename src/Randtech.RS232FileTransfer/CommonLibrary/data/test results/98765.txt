@@ -1,0 +1,15 @@
+﻿98765
+this is the file that will be created on the RECEIVE computer.
+the file should respect CR's so that the file format is preserved.
+note that the file name is the same as the first 5 numbers... no test is rquired just grab the first 5 characters
+once the file has been crated correctly on the RECEIVE computer a handshake back to the SEND computer should be made before the SEND program terminates
+A suitable handshake might be checking that the number of chr$ in each file match.
+this program should only be a light load on the CPU
+this program has no HMI
+there should be a file in C:\data\FileTransfer\... called FileTransferReceive.txt which will contain the following:
+
+C:\data\test results
+com 4
+
+This tells the program what com port to use and what dir to save to.
+The .exe will reside in C:\data\FileTransfer\

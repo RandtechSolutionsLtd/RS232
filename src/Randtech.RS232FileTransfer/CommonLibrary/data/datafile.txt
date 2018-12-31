@@ -1,0 +1,22 @@
+﻿98765
+this is the file that will be created on the SEND computer.
+the file contents will be on many lines but will not be more than 300 chars.
+note that the file will ALWAYS start with 5 numbers.
+if you would like an EOF character, this is possible.
+A handshake back from the RECEIVE computer should be made before the SEND program terminates
+A suitable handshake might be checking that the number of chr$ in each file match.
+
+this program has no HMI - but should through up the following dialog boxes appropriately for 2 seconds
+
+FILE TRANSFER SUCCESSFUL
+
+FILE TRANSFER FAILED
+
+
+there should be a file in C:\data\FileTransfer\... called FileTransferSend.txt which will contain the following:
+
+C:\data\datafile.txt
+com 6
+
+This tells the program what com port to use and what dir and file name to load.
+The .exe will reside in C:\data\FileTransfer\

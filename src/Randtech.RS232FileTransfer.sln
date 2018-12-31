@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2046
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{7D701248-C500-4EB8-9DFF-75E6B2537D82}"
+	ProjectSection(SolutionItems) = preProject
+		InstallLog-v1.0.1.txt = InstallLog-v1.0.1.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject", "Randtech.RS232FileTransfer\UnitTestProject\UnitTestProject.csproj", "{A1AECA27-CD9D-4508-85B7-BEA835862FAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary", "Randtech.RS232FileTransfer\CommonLibrary\CommonLibrary.csproj", "{764B013A-24E3-4FF3-A241-F7E64DBE0676}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Get", "Randtech.RS232FileTransfer\Get\Get.csproj", "{3047350D-2219-4969-8D72-8B7273B1097B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Send", "Randtech.RS232FileTransfer\Send\Send.csproj", "{26F796A5-E579-458C-8A49-29F6DB2A2BCA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppForPorts", "ConsoleAppForPorts\ConsoleAppForPorts.csproj", "{98F44586-3553-4D47-AB2D-60CAAC52E16C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1AECA27-CD9D-4508-85B7-BEA835862FAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1AECA27-CD9D-4508-85B7-BEA835862FAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1AECA27-CD9D-4508-85B7-BEA835862FAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1AECA27-CD9D-4508-85B7-BEA835862FAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{764B013A-24E3-4FF3-A241-F7E64DBE0676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{764B013A-24E3-4FF3-A241-F7E64DBE0676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{764B013A-24E3-4FF3-A241-F7E64DBE0676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{764B013A-24E3-4FF3-A241-F7E64DBE0676}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3047350D-2219-4969-8D72-8B7273B1097B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3047350D-2219-4969-8D72-8B7273B1097B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3047350D-2219-4969-8D72-8B7273B1097B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3047350D-2219-4969-8D72-8B7273B1097B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26F796A5-E579-458C-8A49-29F6DB2A2BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26F796A5-E579-458C-8A49-29F6DB2A2BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26F796A5-E579-458C-8A49-29F6DB2A2BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26F796A5-E579-458C-8A49-29F6DB2A2BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98F44586-3553-4D47-AB2D-60CAAC52E16C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98F44586-3553-4D47-AB2D-60CAAC52E16C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98F44586-3553-4D47-AB2D-60CAAC52E16C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98F44586-3553-4D47-AB2D-60CAAC52E16C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9998B9B1-CA4A-422F-A10C-B7FE1CA91285}
+	EndGlobalSection
+EndGlobal
