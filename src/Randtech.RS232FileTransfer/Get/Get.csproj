@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3047350D-2219-4969-8D72-8B7273B1097B}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Get</RootNamespace>
-    <AssemblyName>Get</AssemblyName>
+    <RootNamespace>Randtech.RS232FileTransfer.Get</RootNamespace>
+    <AssemblyName>Randtech.RS232FileTransfer.Get</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

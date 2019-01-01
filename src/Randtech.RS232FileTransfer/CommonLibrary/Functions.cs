@@ -74,7 +74,7 @@ namespace Randtech.RS232FileTransfer.CommonLibrary
 			var port = new SerialPort
 			{
 				BaudRate = Settings.BaudRate,
-				DataBits = int.Parse(Settings.DataBits),
+				DataBits = Settings.DataBits,
 				PortName = desiredPortName,
 				StopBits = Settings.StopBits,
 				Parity = Settings.Parity,

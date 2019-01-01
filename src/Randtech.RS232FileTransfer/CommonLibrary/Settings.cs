@@ -29,9 +29,17 @@ namespace Randtech.RS232FileTransfer.CommonLibrary
 
 
 		public static int BaudRate { get; } = int.Parse(ConfigurationManager.AppSettings["baudRate"] ?? "9600");
-		public static string MessageFail { get; set; } = ConfigurationManager.AppSettings["messageFail"];
+		public static string MessageFail { get; set; } = ConfigurationManager.AppSettings[" "];
 		public static string MessageSuccess { get; set; } = ConfigurationManager.AppSettings["messageSuccess"];
 		public static int MaximumRetries { get; set; } = int.Parse(ConfigurationManager.AppSettings["maxTries"] ?? "20");
+
+		public static int DataBits { get; internal set; } = int.Parse(ConfigurationManager.AppSettings["dataBits"] ?? "1");
+
+
+
+		public static bool RtsEnable { get; internal set; } = false;
+		public static bool DtrEnable { get; internal set; } = false;
+		public static int ReadTimeout { get; internal set; }  = -1;
 
 
 
