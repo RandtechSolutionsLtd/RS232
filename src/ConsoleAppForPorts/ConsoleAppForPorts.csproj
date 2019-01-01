@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{98F44586-3553-4D47-AB2D-60CAAC52E16C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleAppForPorts</RootNamespace>
-    <AssemblyName>ConsoleAppForPorts</AssemblyName>
+    <RootNamespace>Randtech.RS232FileTransfer.ConsoleAppForPorts</RootNamespace>
+    <AssemblyName>Randtech.RS232FileTransfer.ConsoleAppForPorts</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
