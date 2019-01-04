@@ -90,7 +90,6 @@ namespace Randtech.RS232FileTransfer.CommonLibrary
 
 			return port;
 		}
-
 		/// <summary> Works out the name of the file that will be saved, by looking at the file buffer's first 5 characters </summary>
 		/// <param name="buffer">File buffer to read filename from</param>
 		/// <returns>The five digit file name, with the .txt extension</returns>
@@ -110,21 +109,6 @@ namespace Randtech.RS232FileTransfer.CommonLibrary
 		}
 
 		/// <summary>
-		/// Gets a file as an array of bytes
-		/// </summary>
-		/// <param name="fileName">File to get as bytes</param>
-		/// <returns>Byte[] version of file</returns>
-		public static byte[] ReadByteArrayFromFile(string fileName)
-		{
-			byte[] buff = null;
-			var fs = new FileStream(fileName, FileMode.Open, FileAccess.Read);
-			var br = new BinaryReader(fs);
-			long numBytes = new FileInfo(fileName).Length;
-			buff = br.ReadBytes((int)numBytes);
-			return buff;
-		}
-
-		/// <summary>
 		/// Transmits a file with the Path supplied over a SerialPort
 		/// </summary>
 		/// <param name="port">SerialPort to send file over</param>
@@ -133,18 +117,6 @@ namespace Randtech.RS232FileTransfer.CommonLibrary
 		{
 			port.Open();
 			port.Write(File.OpenText(pathName).ReadToEnd());
-			port.Close();
-		}
-
-		/// <summary> Transmits a file with the Path supplied over a SerialPort as a Binary file. </summary>
-		/// <param name="port">SerialPort to send file over</param>
-		/// <param name="pathName">Path to file</param>
-		public static void SendBinaryFile(SerialPort port, string pathName)
-		{
-			port.Open();
-			using (FileStream fs = File.OpenRead(pathName))
-				port.Write((new BinaryReader(fs)).ReadBytes((int)fs.Length), 0, (int)fs.Length);
-
 			port.Close();
 		}
 
@@ -192,10 +164,11 @@ namespace Randtech.RS232FileTransfer.CommonLibrary
 		private static void VerifyPortName(string desiredPortName)
 		{
 			var names = new List<string>(SerialPort.GetPortNames()); // existing ports
-			if (!names.Contains(desiredPortName)){
+			if (!names.Contains(desiredPortName))
+			{
 				throw new InvalidOperationException($"There is no port on this machine with the required port name '{desiredPortName}'. Check configuration.");
 			}
-		} 
+		}
 		#endregion
 	}
 }
